@@ -1,0 +1,6 @@
+* text eol=lf
+
+screenshots/*.webp binary
+fonts/*.woff2 binary
+images/*.png binary
+icons/*.png binary

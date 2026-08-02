@@ -1,0 +1,274 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: 0BSD -->
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="require-trusted-types-for 'script'; default-src 'self'; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; object-src 'none'; base-uri 'self';">
+        <title>A random password generator</title>
+        <meta name="description" content="A random password generator, secure, flexible and supports passphrases">
+
+        <meta name="color-scheme" content="dark">
+        <meta name="theme-color" content="#111122">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="preload" type="font/woff2" as="font" fetchpriority="high" href="/fonts/Inter-Regular.woff2" crossorigin="anonymous">
+        <link rel="preload" type="font/woff2" as="font" href="/fonts/Inter-Bold.woff2" crossorigin="anonymous">
+        <link rel="preload" type="font/woff2" as="font" href="/fonts/JetBrainsMono-Regular.woff2" crossorigin="anonymous">
+        <link rel="modulepreload" type="module" as="script" href="/scripts/password-generator.js">
+        <style>
+            @media not (display-mode: browser) {
+                a {
+                    pointer-events: none;
+                }
+            }
+
+            @font-face {
+                font-family: Inter;
+                font-display: swap;
+                font-style: normal;
+                font-weight: 400;
+                src: url("/fonts/Inter-Regular.woff2") format("woff2");
+            }
+
+            @font-face {
+                font-family: Inter;
+                font-display: swap;
+                font-style: normal;
+                font-weight: 700;
+                src: url("/fonts/Inter-Bold.woff2") format("woff2");
+            }
+
+            @font-face {
+                font-family: "JetBrains Mono";
+                font-style: normal;
+                font-display: swap;
+                src: url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
+            }
+
+            :root {
+                --color: #fd4;
+                --dim-color: #224;
+                --background-color: #112;
+                --text-color: #d1d1d1;
+            }
+
+            body {
+                font-family: Inter, sans-serif;
+                font-feature-settings: "ss02" 1, "ss01" 1;
+                background-color: var(--background-color);
+                color: var(--text-color);
+                align-items: center;
+                font-size: 16px;
+                max-width: 40em;
+                margin: 0 auto;
+                padding: 1em;
+            }
+
+            button {
+                font-family: inherit;
+                display: inline-flex;
+                align-items: center;
+                margin-right: 0.5em;
+                margin-top: 0.5em;
+                border-radius: 2em;
+                padding: 0.5em 1em;
+                gap: 8px;
+            }
+
+            img {
+                aspect-ratio: auto 1 / 1;
+                height: 32px;
+                width: 32px;
+            }
+
+            h1, h2, h3, h4, h5, h6, a {
+                color: var(--color);
+            }
+
+            h1, h2 {
+                border-bottom: 2px dotted var(--dim-color);
+            }
+
+            footer {
+                border-top: 2px dotted var(--dim-color);
+                text-align: center;
+                padding-top: 0.5em;
+                margin-top: 2em;
+            }
+
+            input:invalid + div::after {
+                content: "Too short length";
+            }
+
+            input:not([type=checkbox]) {
+                font-family: "JetBrains Mono", monospace;
+                background-color: var(--dim-color);
+                font-variant-ligatures: none;
+                color: var(--text-color);
+                border-radius: 0.5em;
+                padding: 0.5em;
+                border: 0;
+            }
+
+            input[type=checkbox] {
+                accent-color: var(--color);
+            }
+
+            button span, input {
+                font-size: 18px;
+            }
+
+            form input {
+                width: 100%;
+            }
+
+            .new-line .group > * {
+                margin-bottom: 8px;
+            }
+
+            .new-line input:not([type=checkbox]) {
+                width: 60%;
+            }
+
+            .new-line {
+                flex-direction: column;
+                align-items: flex-start;
+                display: flex;
+            }
+
+            .group {
+                align-items: center;
+                display: flex;
+                gap: 8px;
+            }
+
+            .top-label {
+                margin-bottom: 0.5em;
+                font-weight: 600;
+                margin-top: 1em;
+            }
+
+            .main-button {
+                background-color: var(--color);
+                color: var(--background-color);
+                border: 0;
+            }
+
+            .sub-button {
+                background-color: var(--background-color);
+                border: 2px solid var(--color);
+                color: var(--color);
+            }
+        </style>
+        <script type="module" src="/scripts/password-generator.js"></script>
+
+        <link rel="prefetch" type="image/svg+xml" as="image" href="/images/main-done.svg">
+        <link rel="prefetch" type="image/svg+xml" as="image" href="/images/sub-done.svg">
+        <link rel="prefetch" type="image/svg+xml" as="image" href="/images/hide.svg">
+        <link rel="prefetch" type="module" href="/scripts/get-word-list.js">
+
+        <link rel="icon" type="image/svg+xml" sizes="any" href="/icons/icon.svg">
+        <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon.png">
+        <link rel="apple-touch-icon" href="/icons/square-icon-180.png">
+
+        <link rel="manifest" type="application/manifest+json" href="/
+/manifest.webmanifest">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="ARPG">
+        <meta name="twitter:description" content="Secure, flexible and supports passphrases">
+        <meta name="twitter:image:alt" content="A random password generator">
+        <meta name="twitter:image:src" content="https://a-random-password-generator.pages.dev/images/banner.png">
+        <meta name="twitter:url" content="https://a-random-password-generator.pages.dev/">
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "ARPG",
+                "alternateName": "A random password generator",
+                "url": "https://a-random-password-generator.pages.dev/",
+                "description": "A random password generator, secure, flexible and supports passphrases.",
+                "applicationCategory": "SecurityApplication",
+                "operatingSystem": "All",
+                "browserRequirements": "Requires JavaScript",
+                "image": "https://a-random-password-generator.pages.dev/images/banner.png",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "featureList": [
+                    "Random password generation",
+                    "Passphrase support",
+                    "Password entropy calculation",
+                    "Custom character support",
+                    "Adjustable length"
+                ]
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <noscript>
+                <p>Enable JavaScript</p>
+            </noscript>
+            <h1>ARPG</h1>
+            <p>A random password generator</p>
+        </header>
+        <main>
+            <h2 id="password-label">Your password</h2>
+            <form>
+                <div class="group">
+                    <input id="password" type="password" aria-labelledby="password-label" autocomplete="off" readonly>
+                    <button id="change-password-visibility" class="sub-button" type="button">
+                        <img id="image-visibility" src="/images/show.svg" alt="Show">
+                    </button>
+                </div>
+            </form>
+            <p class="new-line">
+                <span id="password-entropy">Entropy</span>
+                <span id="password-length">Length</span>
+            </p>
+            <button id="generate-password" class="main-button" type="button">
+                <img id="image-generate" src="/images/generate.svg" alt="">
+                <span id="text-generate">Regenerate</span>
+            </button>
+            <button id="copy-password" class="sub-button" type="button">
+                <img id="image-copy" src="/images/copy.svg" alt="">
+                <span id="text-copy">Copy</span>
+            </button>
+            <h2>Settings</h2>
+            <div class="new-line">
+                <div class="group">
+                    <input type="checkbox" id="use-punctuation" checked>
+                    <label for="use-punctuation">Punctuation characters</label>
+                </div>
+                <div class="group">
+                    <input type="checkbox" id="use-passphrase">
+                    <label for="use-passphrase">Passphrase</label>
+                </div>
+                <label class="top-label" for="length">Length</label>
+                <input id="length" type="number" min="4" value="40" required>
+                <div></div>
+                <label class="top-label" for="custom-chars">Custom characters</label>
+                <input id="custom-chars" type="text">
+            </div>
+            <h2>What is entropy</h2>
+            <p>
+                The amount of uncertainty that an attacker faces to determine the value of a secret.
+                Entropy is usually stated in bits. A value with n bits of entropy has the same degree of uncertainty
+                as a uniformly distributed n-bit random value.
+            </p>
+            <p>Passwords with entropy below 98 bits are considered to be weak.</p>
+            <p>
+                <a href="https://pages.nist.gov/800-63-4/sp800-63b.html#passwordver">NIST SP800-63B</a>
+            </p>
+        </main>
+        <footer>
+            <a href="https://github.com/nedorazrab0/arpg">
+                <img loading="lazy" src="/icons/icon.svg" alt="Github">
+            </a>
+        </footer>
+    </body>
+</html>

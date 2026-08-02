@@ -1,0 +1,99 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: 0BSD -->
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="require-trusted-types-for 'script'; default-src 'self'; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; object-src 'none'; base-uri 'self';">
+        <title>404 Not Found</title>
+        <meta name="description" content="404 Not Found">
+
+        <meta name="color-scheme" content="dark">
+        <meta name="theme-color" content="#111122">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="preload" type="font/woff2" as="font" fetchpriority="high" href="/fonts/Inter-Bold.woff2" crossorigin="anonymous">
+        <link rel="preload" type="font/woff2" as="font" href="/fonts/Inter-Regular.woff2" crossorigin="anonymous">
+        <style>
+            @font-face {
+                font-family: Inter;
+                font-display: swap;
+                font-style: normal;
+                font-weight: 700;
+                src: url("/fonts/Inter-Bold.woff2") format("woff2");
+            }
+
+            @font-face {
+                font-family: Inter;
+                font-display: swap;
+                font-style: normal;
+                font-weight: 400;
+                src: url("/fonts/Inter-Regular.woff2") format("woff2");
+            }
+
+            :root {
+                --color: #fd4;
+                --dim-color: #224;
+                --background-color: #112;
+                --text-color: #d1d1d1;
+            }
+
+            body {
+                font-family: Inter, sans-serif;
+                font-feature-settings: "ss02" 1, "ss01" 1;
+                background-color: var(--background-color);
+                color: var(--text-color);
+                align-items: center;
+                font-size: 16px;
+                max-width: 40em;
+                margin: 0 auto;
+                padding: 1em;
+            }
+
+            img {
+                aspect-ratio: auto 1 / 1;
+                height: 32px;
+                width: 32px;
+            }
+
+            h1, h2, h3, h4, h5, h6, a {
+                color: var(--color);
+            }
+
+            h1, h2 {
+                border-bottom: 2px dotted var(--dim-color);
+            }
+
+            footer {
+                border-top: 2px dotted var(--dim-color);
+                text-align: center;
+                padding-top: 0.5em;
+                margin-top: 2em;
+            }
+        </style>
+
+        <link rel="prefetch" as="document" href="/">
+
+        <link rel="icon" type="image/svg+xml" sizes="any" href="/icons/icon.svg">
+        <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon.png">
+        <link rel="apple-touch-icon" href="/icons/square-icon-180.png">
+
+        <link rel="manifest" type="application/manifest+json" href="/manifest.webmanifest">
+
+        <meta name="robots" content="noindex">
+    </head>
+    <body>
+        <header>
+            <h1>ARPG</h1>
+            <p>A random password generator</p>
+        </header>
+        <main>
+            <h2>404 Not Found</h2>
+            <a href="/">Go to the main page</a>
+        </main>
+        <footer>
+            <a href="https://github.com/nedorazrab0/arpg">
+                <img loading="lazy" src="/icons/icon.svg" alt="Github">
+            </a>
+        </footer>
+    </body>
+</html>
