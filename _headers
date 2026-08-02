@@ -10,3 +10,4 @@
     Upgrade-Insecure-Requests: 1
     X-Content-Type-Options: nosniff
     X-Frame-Options: DENY
+    CF-ECH: false
