@@ -143,7 +143,7 @@ async function displayPassword(clicked) {
     const customChars = getValue("custom-chars");
 
     if (passwordLength < 4) {
-        return
+        return;
     }
     const passwordData = await generatePassword(
         passwordLength,
