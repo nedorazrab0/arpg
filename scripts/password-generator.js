@@ -38,20 +38,16 @@ function buttonDone(name, main, newText, oldText) {
 }
 
 function changeVisibility() {
+    const image = document.getElementById("image-visibility");
     const input = document.getElementById("password");
     if (input.type === "password") {
         input.type = "text";
+        image.src = "/images/hide.svg";
+        image.alt = "Hide"
     } else {
         input.type = "password";
-    }
-
-    const image = document.getElementById("image-visibility");
-    const showImage = "/images/show.svg";
-    const hideImage = "/images/hide.svg";
-    if (image.src.includes(showImage)) {
-        image.src = hideImage;
-    } else {
-        image.src = showImage;
+        image.src = "/images/show.svg";
+        image.alt = "Show";
     }
 }
 
