@@ -1,7 +1,7 @@
 "use strict";
 // SPDX-License-Identifier: 0BSD
 
-const timeoutIds = {};
+const timeouts = {};
 let wordListModule = null;
 
 async function loadWordList() {
@@ -25,14 +25,14 @@ function buttonDone(name, main, newText, oldText) {
     text.textContent = newText;
     const prefix = main ? "main" : "sub";
     image.src = `/images/${prefix}-done.svg`;
-    if (timeoutIds[name]) {
-        clearTimeout(timeoutIds[name]);
+    if (timeouts[name]) {
+        clearTimeout(timeouts[name]);
     }
-    timeoutIds[name] = setTimeout(
+    timeouts[name] = setTimeout(
         () => {
             text.textContent = oldText;
             image.src = `/images/${name}.svg`;
-            delete timeoutIds[name];
+            delete timeouts[name];
         }, 2000
     );
 }
@@ -51,10 +51,14 @@ function changeVisibility() {
     }
 }
 
-function copy() {
+async function copy() {
     const password = getValue("password");
-    navigator.clipboard.writeText(password);
-    buttonDone("copy", false, "Copied", "Copy");
+    try {
+        await navigator.clipboard.writeText(password);
+        buttonDone("copy", false, "Copied", "Copy");
+    } catch {
+        alert("Failed to copy0");
+    }
 }
 
 function getRandomChoice(item) {
