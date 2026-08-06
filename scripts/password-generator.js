@@ -75,12 +75,14 @@ function randomShuffle(item) {
 }
 
 function getRandomNumber(max) {
-    if (max < 1) {
+    const maxUint32 = 4294967296;
+    if (max < 1 || max > maxUint32) {
         return;
     }
     const buffer = new Uint32Array(1);
-    const limit = 2**32 - (2**32 % max) - 1;
+    const limit = maxUint32 - (maxUint32 % max) - 1;
     let randomNumber = 0;
+    // Return an unbiased number
     do {
         randomNumber = window.crypto.getRandomValues(buffer)[0];
     } while (randomNumber > limit);
