@@ -1,3 +1,7 @@
+<div align="center">
+    <img style="width: 32px; height: 32px;" src="/icons/icon.svg">
+</div>
+
 # ARPG
 
 Secure, client-side web application designed to generate random passwords and
@@ -15,7 +19,3 @@ calculates password entropy to ensure cryptographic strength.
 module handling button clicks, password generation and entropy calculation.
 - [Word list](/scripts/get-word-list.js): A JavaScript module exporting a
 predefined array of three-letter words for passphrases.
-
-<div align="center">
-    <img style="width: 32px; height: 32px;" src="https://a-random-password-generator.pages.dev/icons/icon.svg">
-</div>
