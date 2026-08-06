@@ -43,7 +43,7 @@ function changeVisibility() {
     if (input.type === "password") {
         input.type = "text";
         image.src = "/images/hide.svg";
-        image.alt = "Hide"
+        image.alt = "Hide";
     } else {
         input.type = "password";
         image.src = "/images/show.svg";
@@ -57,7 +57,7 @@ async function copy() {
         await navigator.clipboard.writeText(password);
         buttonDone("copy", false, "Copied", "Copy");
     } catch {
-        alert("Failed to copy0");
+        alert("Failed to copy");
     }
 }
 
@@ -75,12 +75,15 @@ function randomShuffle(item) {
 }
 
 function getRandomNumber(max) {
+    if (max < 1) {
+        return;
+    }
     const buffer = new Uint32Array(1);
-    const limit = 2**32 - (2**32 % max);
-    let randomNumber;
+    const limit = 2**32 - (2**32 % max) - 1;
+    let randomNumber = 0;
     do {
         randomNumber = window.crypto.getRandomValues(buffer)[0];
-    } while (randomNumber >= limit);
+    } while (randomNumber > limit);
     return randomNumber % max;
 }
 
