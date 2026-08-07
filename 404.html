@@ -18,7 +18,7 @@
                 font-display: swap;
                 font-style: normal;
                 font-weight: 700;
-                src: url("/fonts/Inter-Bold.woff2") format("woff2");
+                src: url("/fonts/Inter-Bold-ASCII.woff2") format("woff2");
             }
 
             @font-face {
@@ -26,9 +26,18 @@
                 font-display: swap;
                 font-style: normal;
                 font-weight: 400;
-                src: url("/fonts/Inter-Regular.woff2") format("woff2");
+                src: url("/fonts/Inter-Regular-ASCII.woff2") format("woff2");
             }
 
+            @font-face {
+                font-family: arial-fallback;
+                src: local('Arial');
+                ascent-override: 90%;
+                descent-override: 22%;
+                line-gap-override: 0%;
+                size-adjust: 107%;
+            }
+            
             :root {
                 --color: #fd4;
                 --dim-color: #224;
@@ -37,7 +46,7 @@
             }
 
             body {
-                font-family: Inter, sans-serif;
+                font-family: Inter, arial-fallback, sans-serif;
                 font-feature-settings: "ss02" 1, "ss01" 1;
                 background-color: var(--background-color);
                 color: var(--text-color);
