@@ -1,0 +1,15 @@
+# ARPG
+
+> ARPG (a random password generator) is a secure, client-side web application
+designed to generate random passwords and passphrases. It provides flexible
+settings for length and character sets, and calculates password entropy to
+ensure cryptographic strength.
+
+## Scripts
+
+- [Password generator](https://a-random-password-generator.pages.dev/scripts/password-generator.js):
+The core JavaScript module handling button clicks, password generation and
+entropy calculation.
+- [Word list](https://a-random-password-generator.pages.dev/scripts/get-word-list.js):
+A JavaScript module exporting a predefined array of three-letter words for
+passphrases.
