@@ -1,5 +1,5 @@
 /*
-    Content-Security-Policy: style-src 'self'; default-src 'self'; font-src 'self'; script-src 'none'; object-src 'none'; base-uri 'none'; require-trusted-types-for 'script'; frame-ancestors 'none'; upgrade-insecure-requests;
+    Content-Security-Policy: style-src 'sha512-5XM3EuX4Pk+Z3AJtQPUhZZwfxk6WfbTeFDQdPZwbUk8ui7Mb1CteHEFAJd/1evXJTT7l0e0R12vDzDd6Ltz5Gw=='; default-src 'self'; font-src 'self'; script-src 'none'; object-src 'none'; base-uri 'none'; require-trusted-types-for 'script'; frame-ancestors 'none'; upgrade-insecure-requests;
     Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
     Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
     Referrer-Policy: strict-origin-when-cross-origin
