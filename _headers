@@ -1,5 +1,5 @@
 /*
-    Content-Security-Policy: style-src 'none'; default-src 'none'; font-src 'none'; script-src 'none'; object-src 'none'; base-uri 'none'; require-trusted-types-for 'script'; frame-ancestors 'none'; upgrade-insecure-requests;
+    Content-Security-Policy: style-src 'self'; default-src 'self'; font-src 'self'; script-src 'none'; object-src 'none'; base-uri 'none'; require-trusted-types-for 'script'; frame-ancestors 'none'; upgrade-insecure-requests;
     Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
     Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
     Referrer-Policy: strict-origin-when-cross-origin
@@ -7,20 +7,18 @@
     Cross-Origin-Resource-Policy: same-origin
     Cross-Origin-Opener-Policy: same-origin
     Cache-Control: public, max-age=31536000
-    Upgrade-Insecure-Requests: 1
     X-Content-Type-Options: nosniff
     X-Frame-Options: DENY
 
-/*.html
-    ! Cache-Control
-    Cache-Control: public, no-cache
-
 /
     ! Content-Security-Policy
+    ! Cache-Control
     Content-Security-Policy: style-src 'sha512-FmOfZHWWsnottb0dhH0PPgI/qYNpnQkoWh/FSdlU8nBzNDnFigepM1jiUv264krEmprDAGRWYsVs3laOW2vodA=='; default-src 'self'; font-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; require-trusted-types-for 'script'; frame-ancestors 'none'; upgrade-insecure-requests;
-
+    Cache-Control: public, no-cache
 
 /404
     ! Content-Security-Policy
+    ! Cache-Control
     Content-Security-Policy: style-src 'sha512-5XM3EuX4Pk+Z3AJtQPUhZZwfxk6WfbTeFDQdPZwbUk8ui7Mb1CteHEFAJd/1evXJTT7l0e0R12vDzDd6Ltz5Gw=='; default-src 'self'; font-src 'self'; script-src 'none'; object-src 'none'; base-uri 'none'; require-trusted-types-for 'script'; frame-ancestors 'none'; upgrade-insecure-requests;
+    Cache-Control: public, no-cache
     X-Robots-Tag: noindex
