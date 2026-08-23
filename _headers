@@ -12,7 +12,7 @@
     X-Frame-Options: DENY
 
 /
-    Content-Security-Policy: style-src 'sha512-a'; default-src 'self'; font-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; require-trusted-types-for 'script'; frame-ancestors 'none';
+    Content-Security-Policy: style-src 'sha256-xb0o3S4xTLddx+PRqAsYJb6oXzATORDoK06Mi0JUues='; default-src 'self'; font-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; require-trusted-types-for 'script'; frame-ancestors 'none';
     Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
     Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
     Referrer-Policy: strict-origin-when-cross-origin
