@@ -1,30 +1,3 @@
-/index.html
-    Content-Security-Policy: style-src 'sha512-a'; default-src 'self'; font-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; require-trusted-types-for 'script'; frame-ancestors 'none';
-    Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
-    Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-    Referrer-Policy: strict-origin-when-cross-origin
-    Cross-Origin-Embedder-Policy: require-corp
-    Cross-Origin-Resource-Policy: same-origin
-    Cross-Origin-Opener-Policy: same-origin
-    Cache-Control: public, no-cache
-    Upgrade-Insecure-Requests: 1
-    X-Content-Type-Options: nosniff
-    X-Frame-Options: DENY
-
-/404.html
-    Content-Security-Policy: style-src 'sha512-a'; default-src 'self'; font-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; require-trusted-types-for 'script'; frame-ancestors 'none';
-    Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
-    Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-    Referrer-Policy: strict-origin-when-cross-origin
-    Cross-Origin-Embedder-Policy: require-corp
-    Cross-Origin-Resource-Policy: same-origin
-    Cross-Origin-Opener-Policy: same-origin
-    Cache-Control: public, no-cache
-    Upgrade-Insecure-Requests: 1
-    X-Content-Type-Options: nosniff
-    X-Frame-Options: DENY
-    X-Robots-Tag: noindex
-
 /*
     Content-Security-Policy: style-src 'none'; default-src 'self'; font-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; require-trusted-types-for 'script'; frame-ancestors 'none';
     Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
@@ -37,3 +10,30 @@
     Upgrade-Insecure-Requests: 1
     X-Content-Type-Options: nosniff
     X-Frame-Options: DENY
+
+/
+    Content-Security-Policy: style-src 'sha512-a'; default-src 'self'; font-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; require-trusted-types-for 'script'; frame-ancestors 'none';
+    Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+    Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+    Referrer-Policy: strict-origin-when-cross-origin
+    Cross-Origin-Embedder-Policy: require-corp
+    Cross-Origin-Resource-Policy: same-origin
+    Cross-Origin-Opener-Policy: same-origin
+    Cache-Control: public, no-cache
+    Upgrade-Insecure-Requests: 1
+    X-Content-Type-Options: nosniff
+    X-Frame-Options: DENY
+
+/404
+    Content-Security-Policy: style-src 'sha512-a'; default-src 'self'; font-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; require-trusted-types-for 'script'; frame-ancestors 'none';
+    Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+    Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+    Referrer-Policy: strict-origin-when-cross-origin
+    Cross-Origin-Embedder-Policy: require-corp
+    Cross-Origin-Resource-Policy: same-origin
+    Cross-Origin-Opener-Policy: same-origin
+    Cache-Control: public, no-cache
+    Upgrade-Insecure-Requests: 1
+    X-Content-Type-Options: nosniff
+    X-Frame-Options: DENY
+    X-Robots-Tag: noindex
