@@ -231,12 +231,6 @@ function main() {
     document.getElementById("change-password-visibility")
         .addEventListener("click", changeVisibility);
     displayPassword(false);
-
-    if ("serviceWorker" in navigator) {
-        window.addEventListener(
-            "load", () => navigator.serviceWorker.register("/sw.js")
-        );
-    }
 }
 
 document.addEventListener("DOMContentLoaded", main);
