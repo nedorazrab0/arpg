@@ -1,4 +1,4 @@
-User-agent: *
+User-agent: * 
 Allow: /
 
 Sitemap: https://a-random-password-generator.pages.dev/sitemap.xml
