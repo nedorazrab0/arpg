@@ -13,7 +13,7 @@
 /
     ! Content-Security-Policy
     ! Cache-Control
-    Content-Security-Policy: style-src 'sha512-FmOfZHWWsnottb0dhH0PPgI/qYNpnQkoWh/FSdlU8nBzNDnFigepM1jiUv264krEmprDAGRWYsVs3laOW2vodA=='; default-src 'self'; font-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; require-trusted-types-for 'script'; frame-ancestors 'none'; upgrade-insecure-requests;
+    Content-Security-Policy: style-src 'sha512-knn0ciog5VUa8AyIboavULel0bfmYwV5o7aaI9o88YccufEtyFhtEYWtbAMA44M0Q74MbepOLvLQ8MG+/BxtMQ=='; default-src 'self'; font-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; require-trusted-types-for 'script'; frame-ancestors 'none'; upgrade-insecure-requests;
     Cache-Control: public, no-cache
 
 /404
