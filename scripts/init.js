@@ -224,13 +224,13 @@ function displayPassword(clicked) {
 }
 
 function main() {
+    displayPassword(false);
     document.getElementById("generate-password")
         .addEventListener("click", () => displayPassword(true));
     document.getElementById("copy-password")
         .addEventListener("click", copy);
     document.getElementById("change-password-visibility")
         .addEventListener("click", changeVisibility);
-    displayPassword(false);
 }
 
 document.addEventListener("DOMContentLoaded", main);
