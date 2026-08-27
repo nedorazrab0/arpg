@@ -17,8 +17,6 @@
     Cache-Control: public, no-cache
 
 /404
-    ! Content-Security-Policy
     ! Cache-Control
-    Content-Security-Policy: style-src 'sha512-ajVXyWfY8AKJqXuF8xQUgfi0hkVPieCON0yWcinS7v7mqb2mT9v9/XhoHqqXn5SZvbiy+6jC8shVfECBQlyVww=='; default-src 'self'; font-src 'self'; script-src 'none'; object-src 'none'; base-uri 'none'; require-trusted-types-for 'script'; frame-ancestors 'none'; upgrade-insecure-requests;
     Cache-Control: public, no-cache
     X-Robots-Tag: noindex
