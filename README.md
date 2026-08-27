@@ -9,13 +9,6 @@ calculates password entropy to ensure cryptographic strength.
 - [HTML file](/index.html)
 - [Screenshot](/screenshots/mobile.webp)
 
-## Scripts
-
-- [Password generator](/scripts/password-generator.js): The core JavaScript
-module handling button clicks, password generation and entropy calculation.
-- [Word list](/scripts/get-word-list.js): A JavaScript module exporting a
-predefined array of three-letter words for passphrases.
-
 <div align="center">
     <img style="width: 32px; height: 32px;" src="/icons/icon.svg" alt="Logo">
 </div>
