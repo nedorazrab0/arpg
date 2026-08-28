@@ -12,73 +12,7 @@
 
         <link rel="preload" type="font/woff2" as="font" fetchpriority="high" href="/fonts/Inter-Bold-ASCII.woff2" crossorigin="anonymous" />
         <link rel="preload" type="font/woff2" as="font" href="/fonts/Inter-Regular-ASCII.woff2" crossorigin="anonymous" />
-        <style>
-            @font-face {
-                font-family: Inter;
-                font-display: swap;
-                font-style: normal;
-                font-weight: 700;
-                src: url("/fonts/Inter-Bold-ASCII.woff2") format("woff2");
-            }
-
-            @font-face {
-                font-family: Inter;
-                font-display: swap;
-                font-style: normal;
-                font-weight: 400;
-                src: url("/fonts/Inter-Regular-ASCII.woff2") format("woff2");
-            }
-
-            @font-face {
-                font-family: arial-fallback;
-                line-gap-override: 0%;
-                size-adjust: 107.06%;
-                ascent-override: 90.49%;
-                descent-override: 22.56%;
-                line-gap-override: 0%;
-                src: local(Arial);
-            }
-
-            :root {
-                --color: #fd4;
-                --dim-color: #224;
-                --background-color: #112;
-                --text-color: #d1d1d1;
-            }
-
-            body {
-                font-family: Inter, arial-fallback, sans-serif;
-                font-feature-settings: "ss02" 1, "ss01" 1;
-                background-color: var(--background-color);
-                color: var(--text-color);
-                align-items: center;
-                font-size: 16px;
-                max-width: 40em;
-                margin: 0 auto;
-                padding: 1em;
-            }
-
-            img {
-                aspect-ratio: 1 / 1;
-                height: 32px;
-                width: 32px;
-            }
-
-            h1, h2, h3, h4, h5, h6, a {
-                color: var(--color);
-            }
-
-            h1, h2 {
-                border-bottom: 2px dotted var(--dim-color);
-            }
-
-            footer {
-                border-top: 2px dotted var(--dim-color);
-                text-align: center;
-                padding-top: 0.5em;
-                margin-top: 2em;
-            }
-        </style>
+        <link rel="stylesheet" integrity="sha512-39sdAyMYuImx+JlmP+NjzTM/3vyX+8MnxCtbjc5HMYS3rg1ZuhD+NCpBhkHav/ZMhjBsO8t8dOcHW1S9xBAwRw==" href="/styles/style.css" crossorigin="anonymous" />
 
         <link rel="prefetch" as="document" href="/" />
 
