@@ -13,163 +13,9 @@
         <link rel="preload" type="font/woff2" as="font" fetchpriority="high" href="/fonts/Inter-Regular-ASCII.woff2" crossorigin="anonymous" />
         <link rel="preload" type="font/woff2" as="font" href="/fonts/Inter-Bold-ASCII.woff2" crossorigin="anonymous" />
         <link rel="preload" type="font/woff2" as="font" href="/fonts/JetBrainsMono-Regular.woff2" crossorigin="anonymous" />
-        <link rel="preload" as="script" integrity="sha512-9pDyRYfviJ+ewwvxDP340aW6wlAFPDi3kvX1cUar5f8VclEW4ZwZiwNx73dqzHns4x4K/UKqKpzGkYFHlOADjw==" href="/scripts/init.js" />
-        <style>
-            @media not (display-mode: browser) {
-                a {
-                    pointer-events: none;
-                }
-            }
-
-            @font-face {
-                font-family: Inter;
-                font-display: swap;
-                font-style: normal;
-                font-weight: 400;
-                src: url("/fonts/Inter-Regular-ASCII.woff2") format("woff2");
-            }
-
-            @font-face {
-                font-family: Inter;
-                font-display: swap;
-                font-style: normal;
-                font-weight: 700;
-                src: url("/fonts/Inter-Bold-ASCII.woff2") format("woff2");
-            }
-
-            @font-face {
-                font-family: arial-fallback;
-                line-gap-override: 0%;
-                size-adjust: 107.06%;
-                ascent-override: 90.49%;
-                descent-override: 22.56%;
-                line-gap-override: 0%;
-                src: local(Arial);
-            }
-
-            @font-face {
-                font-family: "JetBrains Mono";
-                font-style: normal;
-                font-display: swap;
-                src: url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
-            }
-
-            :root {
-                --color: #fd4;
-                --dim-color: #224;
-                --background-color: #112;
-                --text-color: #d1d1d1;
-            }
-
-            body {
-                font-family: Inter, arial-fallback, sans-serif;
-                font-feature-settings: "ss02" 1, "ss01" 1;
-                background-color: var(--background-color);
-                color: var(--text-color);
-                align-items: center;
-                font-size: 16px;
-                max-width: 40em;
-                margin: 0 auto;
-                padding: 1em;
-            }
-
-            button {
-                font-family: inherit;
-                display: inline-flex;
-                align-items: center;
-                margin-right: 0.5em;
-                margin-top: 0.5em;
-                border-radius: 2em;
-                padding: 0.5em 1em;
-                gap: 8px;
-            }
-
-            img {
-                aspect-ratio: 1 / 1;
-                height: 32px;
-                width: 32px;
-            }
-
-            h1, h2, h3, h4, h5, h6, a {
-                color: var(--color);
-            }
-
-            h1, h2 {
-                border-bottom: 2px dotted var(--dim-color);
-            }
-
-            footer {
-                border-top: 2px dotted var(--dim-color);
-                text-align: center;
-                padding-top: 0.5em;
-                margin-top: 2em;
-            }
-
-            input:invalid + div::after {
-                content: "Too short length";
-            }
-
-            input:not([type=checkbox]) {
-                font-family: "JetBrains Mono", "Roboto Mono", Menlo, Consolas, "Liberation Mono", monospace;
-                background-color: var(--dim-color);
-                font-variant-ligatures: none;
-                color: var(--text-color);
-                border-radius: 0.5em;
-                padding: 0.5em;
-                border: 0;
-            }
-
-            input[type=checkbox] {
-                accent-color: var(--color);
-            }
-
-            button span, input {
-                font-size: 18px;
-            }
-
-            form input {
-                width: 100%;
-            }
-
-            .new-line .group > * {
-                margin-bottom: 8px;
-            }
-
-            .new-line input:not([type=checkbox]) {
-                width: 60%;
-            }
-
-            .new-line {
-                flex-direction: column;
-                align-items: flex-start;
-                display: flex;
-            }
-
-            .group {
-                align-items: center;
-                display: flex;
-                gap: 8px;
-            }
-
-            .top-label {
-                margin-bottom: 0.5em;
-                font-weight: 600;
-                margin-top: 1em;
-            }
-
-            .main-button {
-                background-color: var(--color);
-                color: var(--background-color);
-                border: 0;
-            }
-
-            .sub-button {
-                background-color: var(--background-color);
-                border: 2px solid var(--color);
-                color: var(--color);
-            }
-        </style>
-        <script crossorigin integrity="sha512-9pDyRYfviJ+ewwvxDP340aW6wlAFPDi3kvX1cUar5f8VclEW4ZwZiwNx73dqzHns4x4K/UKqKpzGkYFHlOADjw==" src="/scripts/init.js" defer></script>
+        <!--link rel="preload" as="script" integrity="sha512-9pDyRYfviJ+ewwvxDP340aW6wlAFPDi3kvX1cUar5f8VclEW4ZwZiwNx73dqzHns4x4K/UKqKpzGkYFHlOADjw==" href="/scripts/password-generator.js" crossorigin="anonymous" /-->
+        <link rel="stylesheet" href="/styles/style.css" crossorigin="anonymous" />
+        <script integrity="sha512-9pDyRYfviJ+ewwvxDP340aW6wlAFPDi3kvX1cUar5f8VclEW4ZwZiwNx73dqzHns4x4K/UKqKpzGkYFHlOADjw==" src="/scripts/password-generator.js" crossorigin="anonymous" defer></script>
 
         <link rel="prefetch" type="image/svg+xml" as="image" href="/images/main-done.svg" />
         <link rel="prefetch" type="image/svg+xml" as="image" href="/images/sub-done.svg" />
@@ -224,13 +70,11 @@
         </header>
         <main>
             <h2 id="your-password">Your password</h2>
-            <form>
-                <div class="group">
-                    <input id="password" type="password" autocomplete="off" aria-labelledby="your-password" aria-live="polite" readonly />
-                    <button id="change-password-visibility" class="sub-button" type="button">
-                        <img id="image-visibility" src="/images/show.svg" alt="Show" />
-                    </button>
-                </div>
+            <form class="group">
+                <input id="password" type="password" autocomplete="off" aria-labelledby="your-password" aria-live="polite" readonly />
+                <button id="change-password-visibility" class="sub-button" type="button">
+                    <img id="image-visibility" src="/images/show.svg" alt="Show" />
+                </button>
             </form>
             <p class="new-line">
                 <span id="password-entropy" aria-live="polite">Entropy</span>
