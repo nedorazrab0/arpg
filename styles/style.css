@@ -109,10 +109,6 @@ button span, input {
     font-size: 18px;
 }
 
-form input {
-    width: 100%;
-}
-
 .new-line .group > * {
     margin-bottom: 8px;
 }
@@ -149,4 +145,8 @@ form input {
     background-color: var(--background-color);
     border: 2px solid var(--color);
     color: var(--color);
+}
+
+#password {
+    width: 100%;
 }
