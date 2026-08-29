@@ -45,7 +45,6 @@
 
 body {
     font-family: Inter, inter-fallback, sans-serif;
-    font-feature-settings: "ss02" 1, "ss01" 1;
     background-color: var(--background-color);
     color: var(--text-color);
     align-items: center;
