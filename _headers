@@ -17,7 +17,7 @@
 /
     ! Content-Security-Policy
     ! Cache-Control
-    Content-Security-Policy: script-src 'self'; default-src 'self'; style-src 'self'; child-src 'none'; media-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; sandbox allow-scripts; require-trusted-types-for 'script'; frame-ancestors 'none'; upgrade-insecure-requests
+    Content-Security-Policy: script-src 'self'; default-src 'self'; style-src 'self'; child-src 'none'; media-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; sandbox allow-same-origin allow-scripts; require-trusted-types-for 'script'; frame-ancestors 'none'; upgrade-insecure-requests
     Cache-Control: public, no-cache
     Refresh: 600
 
