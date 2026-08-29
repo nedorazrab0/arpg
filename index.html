@@ -10,11 +10,11 @@
         <meta name="theme-color" content="#111122" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-        <link rel="preload" type="font/woff2" as="font" fetchpriority="high" href="/fonts/Inter-Regular-ASCII.woff2" crossorigin="anonymous" />
-        <link rel="preload" type="font/woff2" as="font" href="/fonts/Inter-Bold-ASCII.woff2" crossorigin="anonymous" />
-        <link rel="preload" type="font/woff2" as="font" href="/fonts/JetBrainsMono-Regular.woff2" crossorigin="anonymous" />
-        <link rel="stylesheet" integrity="sha512-J56G7yx3/jjxkkTJknMEHfZ15QuX+lKBQV2XHMgkHQbwCJrIW6gGwd9cN+uAI/FjKDIcEGdaxUCrfpl6fN+xGg==" href="/styles/style.css" crossorigin="anonymous" />
-        <script integrity="sha512-9pDyRYfviJ+ewwvxDP340aW6wlAFPDi3kvX1cUar5f8VclEW4ZwZiwNx73dqzHns4x4K/UKqKpzGkYFHlOADjw==" src="/scripts/password-generator.js" crossorigin="anonymous" defer></script>
+        <link rel="preload" type="font/woff2" as="font" fetchpriority="high" href="/fonts/Inter-Regular-ASCII.woff2" crossorigin />
+        <link rel="preload" type="font/woff2" as="font" href="/fonts/Inter-Bold-ASCII.woff2" crossorigin />
+        <link rel="preload" type="font/woff2" as="font" href="/fonts/JetBrainsMono-Regular.woff2" crossorigin />
+        <link rel="stylesheet" integrity="sha512-J56G7yx3/jjxkkTJknMEHfZ15QuX+lKBQV2XHMgkHQbwCJrIW6gGwd9cN+uAI/FjKDIcEGdaxUCrfpl6fN+xGg==" href="/styles/style.css" crossorigin />
+        <script integrity="sha512-9pDyRYfviJ+ewwvxDP340aW6wlAFPDi3kvX1cUar5f8VclEW4ZwZiwNx73dqzHns4x4K/UKqKpzGkYFHlOADjw==" src="/scripts/password-generator.js" crossorigin defer></script>
 
         <link rel="prefetch" type="image/svg+xml" as="image" href="/images/main-done.svg" />
         <link rel="prefetch" type="image/svg+xml" as="image" href="/images/sub-done.svg" />
@@ -72,7 +72,7 @@
             <div class="group">
                 <input id="password" type="password" autocomplete="off" aria-labelledby="your-password" aria-live="polite" readonly />
                 <button id="change-password-visibility" class="sub-button" type="button">
-                    <img id="image-visibility" src="/images/show.svg" alt="Show" />
+                    <img id="image-visibility" src="/images/show.svg" alt="Show" crossorigin />
                 </button>
             </div>
             <p class="new-line">
@@ -80,11 +80,11 @@
                 <span id="password-length" aria-live="polite">Length</span>
             </p>
             <button id="generate-password" class="main-button" type="button">
-                <img id="image-generate" src="/images/generate.svg" alt="" aria-hidden="true" />
+                <img id="image-generate" src="/images/generate.svg" alt="" aria-hidden="true" crossorigin />
                 <span id="text-generate">Regenerate</span>
             </button>
             <button id="copy-password" class="sub-button" type="button">
-                <img id="image-copy" src="/images/copy.svg" alt="" aria-hidden="true" />
+                <img id="image-copy" src="/images/copy.svg" alt="" aria-hidden="true" crossorigin />
                 <span id="text-copy">Copy</span>
             </button>
             <h2>Settings</h2>
@@ -116,7 +116,7 @@
         </main>
         <footer>
             <a href="https://github.com/nedorazrab0/arpg">
-                <img loading="lazy" src="/icons/icon.svg" alt="Source code" />
+                <img loading="lazy" src="/icons/icon.svg" alt="Source code" crossorigin />
             </a>
         </footer>
     </body>
