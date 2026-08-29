@@ -106,14 +106,10 @@ function changeVisibility() {
     }
 }
 
-async function copy() {
+function copy() {
     const password = getValue("password");
-    try {
-        await navigator.clipboard.writeText(password);
-        buttonDone("copy", false, "Copied", "Copy");
-    } catch {
-        alert("Failed to copy");
-    }
+    navigator.clipboard.writeText(password);
+    buttonDone("copy", false, "Copied", "Copy");
 }
 
 function getRandomChoice(item) {
