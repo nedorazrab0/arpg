@@ -6,10 +6,13 @@
     Integrity-Policy: blocked-destinations=(script)
     Cross-Origin-Embedder-Policy: require-corp
     Cross-Origin-Resource-Policy: same-origin
-    X-Permitted-Cross-Domain-Policies: none
     Cross-Origin-Opener-Policy: same-origin
-    X-Content-Type-Options: nosniff
     Referrer-Policy: no-referrer
+
+    Link: </styles/style.css>; rel=preload; as=style; integrity=sha512-J56G7yx3/jjxkkTJknMEHfZ15QuX+lKBQV2XHMgkHQbwCJrIW6gGwd9cN+uAI/FjKDIcEGdaxUCrfpl6fN+xGg==; crossorigin=anonymous
+
+    X-Permitted-Cross-Domain-Policies: none
+    X-Content-Type-Options: nosniff
     X-Frame-Options: DENY
 
 /
