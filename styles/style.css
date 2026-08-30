@@ -39,6 +39,7 @@
 
 @font-feature-values InterVariable {
     @styleset {
+        ss01: 1; ss02: 2;
         open-digits: 1;
         disambiguation: 2;
     }
