@@ -37,6 +37,13 @@
     src: local(Arial);
 }
 
+@font-feature-values InterVariable {
+    @styleset {
+        open-digits: 1;
+        disambiguation: 2;
+    }
+}
+
 @media not (display-mode: browser) {
     a {
         pointer-events: none;
@@ -46,7 +53,7 @@
 body {
     font-family: Inter, inter-fallback, sans-serif;
     background-color: var(--background-color);
-    font-feature-settings: "ss01", "ss02";
+    font-variant-alternates: styleset(open-digits, disambiguation);
     color: var(--text-color);
     align-items: center;
     font-size: 16px;
@@ -94,7 +101,7 @@ input:invalid + div::after {
 input:not([type=checkbox]) {
     font-family: "JetBrains Mono", "Roboto Mono", Menlo, Consolas, "Liberation Mono", monospace;
     background-color: var(--dim-color);
-    font-feature-settings: "calt" 0;
+    font-variant-ligatures: none;
     color: var(--text-color);
     border-radius: 0.5em;
     padding: 0.5em;
