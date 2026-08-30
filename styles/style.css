@@ -37,7 +37,7 @@
     src: local(Arial);
 }
 
-@font-feature-values InterVariable {
+@font-feature-values Inter {
     @styleset {
         ss01: 1; ss02: 2;
         open-digits: 1;
