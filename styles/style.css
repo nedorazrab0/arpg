@@ -46,7 +46,7 @@
 body {
     font-family: Inter, inter-fallback, sans-serif;
     background-color: var(--background-color);
-    font-feature-settings: ss01, ss02;
+    font-feature-settings: "ss01", "ss02";
     color: var(--text-color);
     align-items: center;
     font-size: 16px;
@@ -94,7 +94,7 @@ input:invalid + div::after {
 input:not([type=checkbox]) {
     font-family: "JetBrains Mono", "Roboto Mono", Menlo, Consolas, "Liberation Mono", monospace;
     background-color: var(--dim-color);
-    font-feature-settings: calt 0;
+    font-feature-settings: "calt" 0;
     color: var(--text-color);
     border-radius: 0.5em;
     padding: 0.5em;
