@@ -12,44 +12,44 @@
     "lang": "en",
     "icons": [
         {
-            "src": "icons/square-icon.svg",
+            "src": "/icons/square-icon.svg",
             "type": "image/svg+xml",
             "sizes": "any"
         },
         {
-            "src": "icons/square-icon-192.png",
+            "src": "/icons/square-icon-192.png",
             "type": "image/png",
             "sizes": "192x192"
         },
         {
-            "src": "icons/square-icon-384.png",
+            "src": "/icons/square-icon-384.png",
             "type": "image/png",
             "sizes": "384x384"
         },
         {
-            "src": "icons/square-icon-512.png",
+            "src": "/icons/square-icon-512.png",
             "type": "image/png",
             "sizes": "512x512"
         },
         {
-            "src": "icons/square-icon-1024.png",
+            "src": "/icons/square-icon-1024.png",
             "type": "image/png",
             "sizes": "1024x1024"
         },
         {
-            "src": "icons/maskable-icon.svg",
+            "src": "/icons/maskable-icon.svg",
             "type": "image/svg+xml",
             "sizes": "any",
             "purpose": "maskable"
         },
         {
-            "src": "icons/maskable-icon-512.png",
+            "src": "/icons/maskable-icon-512.png",
             "type": "image/png",
             "sizes": "512x512",
             "purpose": "maskable"
         },
         {
-            "src": "icons/square-icon-1024.png",
+            "src": "/icons/square-icon-1024.png",
             "type": "image/png",
             "sizes": "1024x1024",
             "purpose": "maskable"
@@ -57,15 +57,15 @@
     ],
     "screenshots": [
         {
-            "src": "screenshots/mobile.webp",
+            "src": "/screenshots/mobile.webp",
             "type": "image/webp",
             "sizes": "1215x2160",
             "form_factor": "narrow"
         },
         {
-            "src": "screenshots/desktop.webp",
+            "src": "/screenshots/desktop.webp",
             "type": "image/webp",
-            "sizes": "720x720",
+            "sizes": "1280x720",
             "form_factor": "wide"
         }
     ]
