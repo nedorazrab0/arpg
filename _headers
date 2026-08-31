@@ -4,13 +4,13 @@
     Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
     Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
     Cache-Control: public, max-age=31536000, immutable
-    #Integrity-Policy: blocked-destinations=(script)
+    Integrity-Policy: blocked-destinations=(script)
     Cross-Origin-Embedder-Policy: require-corp
     Cross-Origin-Resource-Policy: same-origin
     Cross-Origin-Opener-Policy: same-origin
     Referrer-Policy: no-referrer
 
-    Link: </styles/style.css>; rel=preload; as=style; integrity=sha512-pu0w/zBrGQuauGkrS3TTVqCZWitp94/4J1vHIKNjh4pr4gtJy1dtcIwjFoygVLSjN31BcfnkEWFD1IFRuUaFTA==
+    Link: </styles/style.css>; rel=preload; as=style; integrity="sha512-pu0w/zBrGQuauGkrS3TTVqCZWitp94/4J1vHIKNjh4pr4gtJy1dtcIwjFoygVLSjN31BcfnkEWFD1IFRuUaFTA=="
 
     X-Permitted-Cross-Domain-Policies: none
     X-Content-Type-Options: nosniff
