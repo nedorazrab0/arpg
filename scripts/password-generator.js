@@ -192,7 +192,7 @@ function copyPassword() {
     const entropyText = `Entropy: ${entropy} bits`;
     document.getElementById("password-entropy").textContent = entropyText;
     navigator.clipboard.writeText(password);
-    buttonDone("generate", "Generate & copy", "Done");
+    buttonDone("generate", "Generate & copy", "Copied");
 }
 
 function main() {
