@@ -92,11 +92,6 @@ function buttonDone(name, oldText, newText) {
     );
 }
 
-function copy() {
-    const password = getValue("password");
-    navigator.clipboard.writeText(password);
-}
-
 function getRandomChoice(item) {
     const randomNumber = getRandomNumber(item.length);
     return item[randomNumber];
@@ -176,7 +171,7 @@ function generatePassword(
     return [password, charsetLength];
 }
 
-function newPassword() {
+function copyPassword() {
     const passwordLength = Number(getValue("length"));
     const usePassphrase = Boolean(getChecked("use-passphrase"));
     const usePunctuation = Boolean(getChecked("use-punctuation"));
@@ -193,16 +188,16 @@ function newPassword() {
     );
     const password = passwordData[0];
     const charsetLength = passwordData[1];
-    copy(password)
     const entropy = getEntropyAmount(passwordLength, charsetLength);
     const entropyText = `Entropy: ${entropy} bits`;
     document.getElementById("password-entropy").textContent = entropyText;
+    navigator.clipboard.writeText(password);
     buttonDone("generate", "Generate & copy", "Done");
 }
 
 function main() {
     document.getElementById("generate-password")
-        .addEventListener("click", newPassword);
+        .addEventListener("click", copyPassword);
 }
 
 if (window.isSecureContext) {
