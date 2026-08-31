@@ -8,7 +8,6 @@
 @media not (display-mode: browser) {
     a {
         pointer-events: none;
-        border-bottom: 0;
     }
 }
 
