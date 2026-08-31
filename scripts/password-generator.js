@@ -74,12 +74,11 @@ function getValue(id) {
     return document.getElementById(id).value;
 }
 
-function buttonDone(name, main, newText, oldText) {
+function buttonDone(name, oldText, newText) {
     const text = document.getElementById("text-" + name);
     const image = document.getElementById("image-" + name);
     text.textContent = newText;
-    const prefix = main ? "main" : "sub";
-    image.src = `/images/${prefix}-done.svg`;
+    image.src = "/images/done.svg";
     if (timeouts[name]) {
         clearTimeout(timeouts[name]);
     }
@@ -88,28 +87,14 @@ function buttonDone(name, main, newText, oldText) {
             text.textContent = oldText;
             image.src = `/images/${name}.svg`;
             delete timeouts[name];
-        }, 2000
+        },
+        2000
     );
-}
-
-function changeVisibility() {
-    const image = document.getElementById("image-visibility");
-    const input = document.getElementById("password");
-    if (input.type === "password") {
-        input.type = "text";
-        image.src = "/images/hide.svg";
-        image.alt = "Hide";
-    } else {
-        input.type = "password";
-        image.src = "/images/show.svg";
-        image.alt = "Show";
-    }
 }
 
 function copy() {
     const password = getValue("password");
     navigator.clipboard.writeText(password);
-    buttonDone("copy", false, "Copied", "Copy");
 }
 
 function getRandomChoice(item) {
@@ -191,7 +176,7 @@ function generatePassword(
     return [password, charsetLength];
 }
 
-function displayPassword(clicked) {
+function newPassword() {
     const passwordLength = Number(getValue("length"));
     const usePassphrase = Boolean(getChecked("use-passphrase"));
     const usePunctuation = Boolean(getChecked("use-punctuation"));
@@ -208,25 +193,18 @@ function displayPassword(clicked) {
     );
     const password = passwordData[0];
     const charsetLength = passwordData[1];
-    const entropy = String(getEntropyAmount(passwordLength, charsetLength))
-    const entropyText = "Entropy: " + entropy + " bits";
-    document.getElementById("password").value = password;
+    copy(password)
+    const entropy = getEntropyAmount(passwordLength, charsetLength);
+    const entropyText = `Entropy: ${entropy} bits`;
     document.getElementById("password-entropy").textContent = entropyText;
-    document.getElementById("password-length").textContent
-        = "Length: " + password.length;
-    if (clicked) {
-        buttonDone("generate", true, "Regenerated", "Regenerate");
-    }
+    buttonDone("generate", "Generate & copy", "Done");
 }
 
 function main() {
-    displayPassword(false);
     document.getElementById("generate-password")
-        .addEventListener("click", () => displayPassword(true));
-    document.getElementById("copy-password")
-        .addEventListener("click", copy);
-    document.getElementById("change-password-visibility")
-        .addEventListener("click", changeVisibility);
+        .addEventListener("click", newPassword);
 }
 
-document.addEventListener("DOMContentLoaded", main);
+if (window.isSecureContext) {
+    document.addEventListener("DOMContentLoaded", main);
+}
