@@ -10,7 +10,7 @@
     Cross-Origin-Opener-Policy: same-origin
     Referrer-Policy: no-referrer
 
-    Link: </styles/style.css>; rel=preload; as=style
+    Link: </styles/style.css>; rel=preload; as=style; integrity=sha512-pu0w/zBrGQuauGkrS3TTVqCZWitp94/4J1vHIKNjh4pr4gtJy1dtcIwjFoygVLSjN31BcfnkEWFD1IFRuUaFTA==
 
     X-Permitted-Cross-Domain-Policies: none
     X-Content-Type-Options: nosniff
