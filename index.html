@@ -10,15 +10,9 @@
         <meta name="theme-color" content="#111122" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-        <link rel="preload" type="font/woff2" as="font" fetchpriority="high" href="/fonts/Inter-Regular-ASCII.woff2" crossorigin />
-        <link rel="preload" type="font/woff2" as="font" href="/fonts/Inter-Bold-ASCII.woff2" crossorigin />
-        <link rel="preload" type="font/woff2" as="font" href="/fonts/JetBrainsMono-Regular.woff2" crossorigin />
-        <link rel="stylesheet" integrity="sha512-J56G7yx3/jjxkkTJknMEHfZ15QuX+lKBQV2XHMgkHQbwCJrIW6gGwd9cN+uAI/FjKDIcEGdaxUCrfpl6fN+xGg==" href="/styles/style.css" crossorigin />
-        <script integrity="sha512-UKlhTvgoZkn5i787eW5s9KDqG5GEbLVwLS/rGsuWF07Kw0x6es4yEDaKQPpeVDe9H2nszec3pa/cKe5sFj4AVQ==" src="/scripts/password-generator.js" crossorigin defer></script>
-
-        <link rel="prefetch" type="image/svg+xml" as="image" href="/images/main-done.svg" />
-        <link rel="prefetch" type="image/svg+xml" as="image" href="/images/sub-done.svg" />
-        <link rel="prefetch" type="image/svg+xml" as="image" href="/images/hide.svg" />
+        <link rel="stylesheet" href="/styles/style.css" crossorigin />
+        <script src="/scripts/password-generator.js" crossorigin defer></script>
+        <link rel="prefetch" type="image/svg+xml" as="image" href="/images/done.svg" />
 
         <link rel="icon" type="image/svg+xml" sizes="any" href="/icons/icon.svg" />
         <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon.png" />
@@ -65,36 +59,17 @@
                 <p>Enable JavaScript</p>
             </noscript>
             <h1>ARPG</h1>
-            <p>A random password generator</p>
+            <p>A random password generator.</p>
         </header>
         <main>
-            <h2 id="your-password">Your password</h2>
-            <div class="group">
-                <input id="password" type="password" autocomplete="off" aria-labelledby="your-password" aria-live="polite" readonly />
-                <button id="change-password-visibility" class="sub-button" type="button">
-                    <img id="image-visibility" src="/images/show.svg" alt="Show" />
-                </button>
-            </div>
-            <p class="new-line">
-                <span id="password-entropy" aria-live="polite">Entropy</span>
-                <span id="password-length" aria-live="polite">Length</span>
-            </p>
-            <button id="generate-password" class="main-button" type="button">
-                <img id="image-generate" src="/images/generate.svg" alt="" aria-hidden="true" />
-                <span id="text-generate">Regenerate</span>
-            </button>
-            <button id="copy-password" class="sub-button" type="button">
-                <img id="image-copy" src="/images/copy.svg" alt="" aria-hidden="true" />
-                <span id="text-copy">Copy</span>
-            </button>
             <h2>Settings</h2>
             <div class="new-line">
                 <div class="group">
-                    <input type="checkbox" id="use-punctuation" checked />
+                    <input id="use-punctuation" type="checkbox" checked />
                     <label for="use-punctuation">Punctuation characters</label>
                 </div>
                 <div class="group">
-                    <input type="checkbox" id="use-passphrase" />
+                    <input id="use-passphrase" type="checkbox" />
                     <label for="use-passphrase">Passphrase</label>
                 </div>
                 <label class="top-label" for="length">Length</label>
@@ -103,6 +78,12 @@
                 <label class="top-label" for="custom-chars">Custom characters</label>
                 <input id="custom-chars" type="text" />
             </div>
+            <h2>Click me</h2>
+            <button id="generate-password" type="button">
+                <img id="image-generate" src="/images/generate.svg" alt="" aria-hidden="true" />
+                <span id="text-generate">Generate & copy</span>
+            </button>
+            <p id="password-entropy" aria-live="polite">Click this button to generate a password.</p>
             <h2>What is entropy</h2>
             <p>
                 The amount of uncertainty that an attacker faces to determine the value of a secret.
