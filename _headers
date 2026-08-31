@@ -10,6 +10,8 @@
     Cross-Origin-Opener-Policy: same-origin
     Referrer-Policy: no-referrer
 
+    Link: </styles/style.css>; rel=preload; as=style
+
     X-Permitted-Cross-Domain-Policies: none
     X-Content-Type-Options: nosniff
     X-Frame-Options: DENY
@@ -19,7 +21,6 @@
     ! Cache-Control
     Content-Security-Policy: script-src 'self'; default-src 'self'; child-src 'none'; media-src 'none'; font-src 'none'; object-src 'none'; base-uri 'none'; connect-src 'none'; form-action 'none'; sandbox allow-same-origin allow-scripts; require-trusted-types-for 'script'; frame-ancestors 'none'; upgrade-insecure-requests
     Cache-Control: public, no-cache
-    Refresh: 600
 
 /404
     ! Cache-Control
