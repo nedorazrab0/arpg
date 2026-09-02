@@ -77,14 +77,14 @@ function getValue(id) {
 function buttonDone(name, oldText, newText) {
     const text = document.getElementById("text-" + name);
     const image = document.getElementById("image-" + name);
-    text.textContent = newText;
+    text.innerText = newText;
     image.src = "/images/done.svg";
     if (timeouts[name]) {
         clearTimeout(timeouts[name]);
     }
     timeouts[name] = setTimeout(
         () => {
-            text.textContent = oldText;
+            text.innerText = oldText;
             image.src = `/images/${name}.svg`;
             delete timeouts[name];
         },
@@ -190,7 +190,7 @@ function copyPassword() {
     const charsetLength = passwordData[1];
     const entropy = getEntropyAmount(passwordLength, charsetLength);
     const entropyText = `Entropy: ${entropy} bits`;
-    document.getElementById("password-entropy").textContent = entropyText;
+    document.getElementById("password-entropy").innerText = entropyText;
     navigator.clipboard.writeText(password);
     buttonDone("generate", "Generate & copy", "Copied");
 }
