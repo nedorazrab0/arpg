@@ -126,7 +126,6 @@ function getEntropyAmount(passwordLength, charsetLength) {
 
 function generatePassword(
     passwordLength,
-    usePunctuation,
     usePassphrase,
     customChars
 ) {
@@ -141,13 +140,11 @@ function generatePassword(
         }
     } else {
         const chars = {
-            punctuation: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~",
             lowercase: "abcdefghijklmnopqrstuvwxyz",
             uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
             digits: "0123456789"
         };
         const charsets = [
-            usePunctuation ? chars.punctuation : "",
             customChars ? customChars : "",
             chars.lowercase,
             chars.uppercase,
@@ -174,7 +171,6 @@ function generatePassword(
 function copyPassword() {
     const passwordLength = Number(getValue("length"));
     const usePassphrase = Boolean(getChecked("use-passphrase"));
-    const usePunctuation = Boolean(getChecked("use-punctuation"));
     const customChars = getValue("custom-chars");
 
     if (passwordLength < 4) {
@@ -182,7 +178,6 @@ function copyPassword() {
     }
     const passwordData = generatePassword(
         passwordLength,
-        usePunctuation,
         usePassphrase,
         customChars
     );
