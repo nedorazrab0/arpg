@@ -10,7 +10,7 @@
     Cross-Origin-Opener-Policy: same-origin
     Referrer-Policy: no-referrer
 
-    Link: </styles/style.css>; rel=preload; as=style; integrity="sha512-eydb4W4CLKCID4wsy0ZkY8bOGrnpskDI1VQM/dcPpguLfBtUY1wpb3QjewHdqIHjth7B/YeUBRWTEJcG0jN46g=="; crossorigin
+    Link: </styles/style.css>; rel=preload; as=style; integrity="sha512-LEDw93iXfkzJVvItODne+E+c3N1OHL9f9qW7IBC3v9KK6LOYriuusoGNAJrss3bM0frat/YEEfeOh1k7jUFEOw=="; crossorigin
 
     X-Permitted-Cross-Domain-Policies: none
     X-Content-Type-Options: nosniff
