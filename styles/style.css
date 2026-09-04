@@ -57,7 +57,7 @@ footer {
 }
 
 input:invalid + div::after {
-    content: "Too short length";
+    content: "Invalid length";
 }
 
 input:not([type=checkbox]) {
