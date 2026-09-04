@@ -38,11 +38,6 @@
                 "operatingSystem": "All",
                 "browserRequirements": "Requires JavaScript",
                 "image": "https://a-random-password-generator.pages.dev/images/banner.png",
-                "offers": {
-                    "@type": "Offer",
-                    "price": "0",
-                    "priceCurrency": "USD"
-                },
                 "featureList": [
                     "Random password generation",
                     "Passphrase support",
@@ -65,18 +60,14 @@
             <h2>Settings</h2>
             <div class="new-line">
                 <div class="group">
-                    <input id="use-punctuation" type="checkbox" checked />
-                    <label for="use-punctuation">Punctuation characters</label>
-                </div>
-                <div class="group">
                     <input id="use-passphrase" type="checkbox" />
                     <label for="use-passphrase">Passphrase</label>
                 </div>
                 <label class="top-label" for="length">Length</label>
                 <input id="length" type="number" min="4" value="40" required />
-                <div></div>
+                <div class="italic"></div>
                 <label class="top-label" for="custom-chars">Custom characters</label>
-                <input id="custom-chars" type="text" maxlength="128" />
+                <input id="custom-chars" type="text" value="!&quot;#$%&amp;&#39;()*+,-./:;&lt;=&gt;?@[\]^_`{|}~" maxlength="256" />
             </div>
             <h2>Click me</h2>
             <button id="generate-password" type="button">
