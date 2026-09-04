@@ -12,7 +12,7 @@
 }
 
 body {
-    font-family: system-ui, sans-serif;
+    font-family: "Noto Sans", system-ui, -apple-system, "Adwaita Sans", Roboto, "Segoe UI", Cantarell, Verdana, Tahoma, "Liberation Sans", sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     align-items: center;
@@ -84,6 +84,10 @@ button span, input {
 
 .new-line input:not([type=checkbox]) {
     width: 60%;
+}
+
+.italic {
+    font-style: italic;
 }
 
 .new-line {
