@@ -195,6 +195,6 @@ function main() {
         .addEventListener("click", copyPassword);
 }
 
-if (window.isSecureContext) {
+if (window.isSecureContext && window.crossOriginIsolated) {
     document.addEventListener("DOMContentLoaded", main);
 }
