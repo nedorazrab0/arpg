@@ -173,7 +173,7 @@ function copyPassword() {
     const usePassphrase = Boolean(getChecked("use-passphrase"));
     const customChars = getValue("custom-chars");
 
-    if (passwordLength < 4) {
+    if (passwordLength < 4 || passwordLength > 128) {
         return;
     }
     const passwordData = generatePassword(
