@@ -7,6 +7,7 @@
 
 @media not (display-mode: browser) {
     a {
+        text-decoration: none;
         pointer-events: none;
     }
 }
