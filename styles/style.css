@@ -9,6 +9,14 @@
     a {
         text-decoration: none;
         pointer-events: none;
+        color: var(--text-color);
+    }
+}
+
+@media (display-mode: browser) {
+    a {
+        text-decoration: underline;
+        color: var(--color);
     }
 }
 
@@ -41,7 +49,7 @@ img {
     width: 32px;
 }
 
-h1, h2, h3, h4, h5, h6, a {
+h1, h2, h3, h4, h5, h6 {
     color: var(--color);
 }
 
@@ -84,10 +92,6 @@ button span, input {
 
 .new-line input:not([type=checkbox]) {
     width: 60%;
-}
-
-.italic {
-    font-style: italic;
 }
 
 .new-line {
