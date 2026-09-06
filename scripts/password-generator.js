@@ -169,6 +169,9 @@ function copyPassword() {
     const usePassphrase = Boolean(getChecked("use-passphrase"));
     const customChars = getValue("custom-chars");
 
+    if (!Number.isInteger(passwordLength)) {
+        return;
+    }
     if (passwordLength < 4 || passwordLength > 128) {
         return;
     }
