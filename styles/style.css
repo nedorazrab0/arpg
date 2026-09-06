@@ -69,10 +69,11 @@ input:invalid + div::after {
 }
 
 input:not([type=checkbox]) {
-    font-family: inherit;
     background-color: var(--dim-color);
+    font-variant-ligatures: none;
     color: var(--text-color);
     border-radius: 0.5em;
+    font-family: inherit;
     padding: 0.5em;
     border: 0;
 }
