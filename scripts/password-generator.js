@@ -124,11 +124,7 @@ function getEntropyAmount(passwordLength, charsetLength) {
     return Math.floor(passwordLength * Math.log2(charsetLength));
 }
 
-function generatePassword(
-    passwordLength,
-    usePassphrase,
-    customChars
-) {
+function generatePassword(passwordLength, usePassphrase, customChars) {
     let separator = ".";
     let rawPassword = [];
     let charsetLength = 0;
@@ -191,10 +187,10 @@ function copyPassword() {
 }
 
 function main() {
-    document.getElementById("generate-password")
-        .addEventListener("click", copyPassword);
+    if (window.isSecureContext && window.crossOriginIsolated) {
+        document.getElementById("generate-password")
+            .addEventListener("click", copyPassword);
+    }
 }
 
-if (window.isSecureContext && window.crossOriginIsolated) {
-    document.addEventListener("DOMContentLoaded", main);
-}
+document.addEventListener("DOMContentLoaded", main);
