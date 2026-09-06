@@ -11,7 +11,7 @@
     Referrer-Policy: no-referrer
     Origin-Agent-Cluster: ?1
 
-    Link: </styles/style.css>; rel=preload; as=style; integrity="sha512-eHrojNZjaFbwVEwmFtqjQMMhoYo6JvNBbeICMPMfxAFj9CfUT1kzt88LKRfXEdmqtSNtdPqYQIWMOsgaYiWuYQ=="; crossorigin
+    Link: </styles/style.css>; rel=preload; as=style; integrity="sha512-xqrI2u/8wQMftzwZWpQDpkAlBsh62kKIYED7GSidezbSM4R3UXrVpbisSbkAMRwA3C0cYxaNSq8kkpAhcEfoZw=="; crossorigin
 
     X-Permitted-Cross-Domain-Policies: none
     X-Content-Type-Options: nosniff
