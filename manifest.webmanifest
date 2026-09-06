@@ -65,7 +65,7 @@
         {
             "src": "/screenshots/desktop.webp",
             "type": "image/webp",
-            "sizes": "1280x720",
+            "sizes": "2560x1440",
             "form_factor": "wide"
         }
     ]
